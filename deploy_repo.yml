@@ -1,0 +1,48 @@
+# deploy_repo.yml
+# repo-ops
+#
+# Copyright (c) 2022 Eduardo Toro
+
+---
+  - name: Deploy and provision a local repository on Github
+    hosts: localhost
+    tasks:
+
+      - name: Create repository on Github and clone it in Downloads
+        shell:
+          cmd: gh repo create dev-project --private -l MIT -d "This is a default private repository created using Github CLI." -c
+          chdir: ~/Downloads/ 
+
+      - name: Create development branch locally
+        shell:
+          cmd: git checkout -b development
+          chdir: ~/Downloads/dev-project/
+
+      - name: Create development branch on Github
+        shell:
+          cmd: git push origin development
+          chdir: ~/Downloads/dev-project/
+
+      - name: Configure local branch with upstream branch
+        shell:
+          cmd: Git push --set-upstream origin development
+          chdir: ~/Downloads/dev-project/
+
+      - name: Copy a default README file in the repository
+        shell:
+          cmd: cp ~/Downloads/README.md ~/Downloads/dev-project/README.md
+
+      - name: Get README file ready to commit
+        shell:
+          cmd: git add README.md
+          chdir: ~/Downloads/dev-project/
+
+      - name: Commit the addition of README file
+        shell:
+          cmd: git commit -m "Added default README file."
+          chdir: ~/Downloads/dev-project/
+
+      - name: Push the local changes to Github
+        shell:
+          cmd: git push 
+          chdir: ~/Downloads/dev-project/

@@ -1,0 +1,18 @@
+# destroy_repo.yml
+# repo-ops
+#
+# Copyright (c) 2022 Eduardo Toro
+
+---
+  - name: Destroy dev repository on local machine and on Github
+    hosts: localhost
+    tasks:
+
+      - name: Delete local repository
+        shell:
+          cmd: rm -rf ~/Downloads/dev-project  
+
+      - name: Delete repository on Github using GH CLI
+        shell:
+          cmd: gh repo delete dev-project --confirm
+  
