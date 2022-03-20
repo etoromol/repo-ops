@@ -1,6 +1,6 @@
-# repo-ops-playbook 🤖
-As a developer, I'm always creating local or remote repositories to code 
-my ideas. I decided it was time to automate this operation, to become faster,
+# repo-ops 🤖
+As a developer, I'm always creating local or remote repositories to code my 
+ideas. I decided it was time to automate this operation, to become faster,
 efficient and focus of what really matters. 
 
 With all that said, I introduce two Ansible playbooks that will take care of:
@@ -24,19 +24,19 @@ To run these playbooks you will need:
 1. Download a copy of this repository onto your Ansible device:
 
 ```bash
-git clone https://github.com/etoromol/repo-ops-playbook.git
+git clone https://github.com/etoromol/repo-ops.git
 ```
 
-2. Change to project directory:
+2. Change to the project directory:
 ```bash
-cd repo-ops-playbook
+cd repo-ops
 ```
 
 ## Configuration
 
-3. Make sure to have the IP Address of the device (where the local repository will 
-be deployed) specified within the hosts key in the playbooks. Because I'm using my
-own computer as the target, the current hosts key looks like:
+3. Make sure to have the IP Address of the device (where the local repository 
+will be deployed) specified within the hosts key in the playbooks. Because I'm 
+using my own computer as the target, the current hosts key is localhost:
 
  ```yml                                                                         
  hosts: localhost                                                            
@@ -44,7 +44,7 @@ own computer as the target, the current hosts key looks like:
 
 ## Deployment
 
-4. To run the playbooks and deploy a repository, use the command below:
+4. To run the playbooks i.e. deploy a repository, use the command below:
 
 ```bash
  ansible-playbook deploy_repo.yml
