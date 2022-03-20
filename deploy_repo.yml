@@ -1,3 +1,8 @@
+# deploy_repo.yml
+# repo-ops
+#
+# Copyright (c) 2022 Eduardo Toro
+
 ---
   - name: Deploy and provision a local repository on Github
     hosts: localhost
