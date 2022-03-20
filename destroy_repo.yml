@@ -1,3 +1,8 @@
+# destroy_repo.yml
+# repo-ops
+#
+# Copyright (c) 2022 Eduardo Toro
+
 ---
   - name: Destroy dev repository on local machine and on Github
     hosts: localhost
