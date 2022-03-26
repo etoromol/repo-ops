@@ -1,7 +1,7 @@
 # repo-ops 🤖
-As a developer, I'm always creating local or remote repositories to code my 
-ideas. I decided it was time to automate this operation, to become faster,
-efficient and focus on what really matters. 
+As a software engineer, I'm always creating local and remote repositories to 
+code my ideas. I decided it was time to automate this operation, to become 
+faster, efficient and focus on what really matters. 
 
 With all that said, I introduce two Ansible playbooks that will take care of:
 
