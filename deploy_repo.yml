@@ -30,7 +30,8 @@
 
       - name: Copy a default README file in the repository
         shell:
-          cmd: cp ~/Downloads/README.md ~/Downloads/dev-project/README.md
+          cmd: cp ~/Downloads/repo-ops/read.md ~/Downloads/dev-project/README.md
+          chdir: ~/Downloads/dev-project/
 
       - name: Get README file ready to commit
         shell:
