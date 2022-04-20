@@ -8,7 +8,7 @@
     hosts: localhost
     tasks:
 
-      - name: Create repository on Github and clone it in Downloads
+      - name: Create repo on Github and make a clone in Downloads folder
         shell:
           cmd: gh repo create dev-project --private -l MIT -d "This is a default private repository created using Github CLI." -c
           chdir: ~/Downloads/ 
@@ -28,7 +28,7 @@
           cmd: Git push --set-upstream origin development
           chdir: ~/Downloads/dev-project/
 
-      - name: Copy a default README file in the repository
+      - name: Copy a default README file in the new repository
         shell:
           cmd: cp ~/Downloads/repo-ops/read.md ~/Downloads/dev-project/README.md
           chdir: ~/Downloads/dev-project/
