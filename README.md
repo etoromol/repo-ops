@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-# dev-project
-This is a default private repository created using Github CLI.
-=======
 # repo-ops 🤖
+
 As a software engineer, I'm always creating local and remote repositories to 
 code my ideas. I decided it was time to automate this operation, to become 
 faster, efficient and focus on what really matters. 
@@ -64,4 +61,3 @@ using my own computer as the target, the current hosts key is localhost:
 Copyright (c) 2022 Eduardo Toro.
 
 Licensed under the [MIT](LICENSE) license.
->>>>>>> 3996cc7c59ce4f6b5c6761c621e09c0e4ae3a987
